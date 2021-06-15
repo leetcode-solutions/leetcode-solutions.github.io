@@ -1,0 +1,53 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #ffb7c5;
+  --ifm-color-primary-dark: #ff8ba2;
+  --ifm-color-primary-darker: #ff7590;
+  --ifm-color-primary-darkest: #ff345b;
+  --ifm-color-primary-light: #ffe3e8;
+  --ifm-color-primary-lighter: #fff9fa;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-code-font-size: 95%;
+  --ifm-font-color-base: #37352f;
+  scroll-behavior: smooth;
+}
+
+html[data-theme='dark'] {
+  --ifm-font-color-base: #f5f6f7; /* notion dark mode text */
+  --ifm-background-color: #36393f; /* discord background */ /*#2f3437;*/ /* notion dark mode background */
+  --ifm-background-surface-color: #18191a;
+  --ifm-code-background: #010227; /* night owl code block theme background color */
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1); /* more friendly highlight for light mode */
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91); /* default code highlight color */
+}
+
+.thin-scrollbar {
+  overflow-y: overlay;
+  /* scrollbar-gutter: stable; */
+}
+
+/* night owl no-italics */
+.prism-code * {
+  font-style: normal !important;
+}
+
+/* optional - to prevent horizontal scrolling in code blocks */
+.prism-code > div {
+  white-space: pre-wrap;
+}
