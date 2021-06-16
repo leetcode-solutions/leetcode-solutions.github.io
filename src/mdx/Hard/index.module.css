@@ -1,4 +1,4 @@
-.lc-hard {
-  color: var(--ifm-color-danger);
+.lc-hard, .lc-hard * {
+  color: var(--ifm-color-danger) !important;
   font-weight: 600;
 }

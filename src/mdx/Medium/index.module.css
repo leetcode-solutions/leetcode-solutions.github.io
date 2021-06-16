@@ -1,4 +1,4 @@
-.lc-medium {
-  color: var(--ifm-color-warning);
+.lc-medium, .lc-medium * {
+  color: var(--ifm-color-warning) !important;
   font-weight: 600;
 }
