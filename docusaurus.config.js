@@ -11,7 +11,7 @@ module.exports = {
   projectName: 'leetcode', // Usually your repo name.
   stylesheets: [
     {
-      href: '/katex/katex.min.css',
+      href: '/static/katex/katex.min.css',
       type: 'text/css',
     },
   ],
@@ -98,6 +98,9 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/duanwilliam/leetcode/edit/main',
+          beforeDefaultRemarkPlugins:[
+            require('./remark-plugin-code-subsuper'),
+          ],
           remarkPlugins: [
             require('remark-math'),
             [require('docusaurus-remark-plugin-codetabs'), {
