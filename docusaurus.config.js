@@ -11,7 +11,7 @@ module.exports = {
   projectName: 'leetcode', // Usually your repo name.
   stylesheets: [
     {
-      href: '/static/katex/katex.min.css',
+      href: '/katex/katex.min.css',
       type: 'text/css',
     },
   ],
