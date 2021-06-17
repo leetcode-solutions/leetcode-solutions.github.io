@@ -27,11 +27,11 @@ Return `true` if you can finish all courses. Otherwise, return `false`.
 
 This is the classic topological sort problem - finding if there is an ordering of vertices in a graph such that for all directed edges from $u$ to $v$, $u$ appears before $v$ in the ordering.
 
-We can represent our list of prerequisites as a directed unweighted graph, where if course $a$ is a prerequisite of course $b$, then there is a directed edge from $a$ to $b$. Our goal is to see if we can create a topological ordering of this resultant graph - that is, we can visit all prerequisites before any given course, and thus being able to eventually finish all courses.
+We can represent our list of prerequisites as a directed unweighted graph, where if course $a$ is a prerequisite of course $b$, then there is a directed edge from $a$ to $b$. Our goal is to see if we can create a topological ordering of this resultant graph; that is, we can visit all prerequisites before any given course, and thus being able to eventually finish all courses.
 
-To see if an ordering's possible, we can maintain an array `can_take` to indicate which courses we can take (that is, all prerequisites have been fulfilled). To know which courses can be taken, we can maintain a count of the "remaining indegree" of each vertex - that is, the number of prerequisites for the class that haven't been "taken" yet.
+To see if an ordering's possible, we can maintain an array `can_take` to indicate which courses we can take (that is, all prerequisites have been fulfilled). To know which courses can be taken, we can maintain a count of the "remaining indegree" of each vertex, or the number of prerequisites for the class that haven't been "taken" yet.
 
-Whenever "taking" a class, we thus decrement the remaining degree of all outgoing edges - that is, the classes that have the class being taken as a prerequisite. If the indegree of any of these becomes zero, we know all prerequisites for that class have thus been fulfilled, and as a result can add it to `can_take`.
+Whenever we "take" a class, we thus decrement the remaining degree of all outgoing edges (each of those classes have "one less prerequisite remaining"). If the indegree of any of these becomes zero, we know all prerequisites for that class have thus been fulfilled, and as a result can add it to `can_take`.
 
 Thus, to check if an ordering exists, we simply need to check if all courses have been in `can_take`.
 
