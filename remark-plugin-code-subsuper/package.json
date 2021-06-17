@@ -1,0 +1,23 @@
+{
+  "name": "remark-plugin-code-subsuper",
+  "version": "1.0.0-alpha.0",
+  "description": "Remark plugin for subscripts/superscripts inside code blocks",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duanwilliam/remark-plugin-code-subsuper.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "engines": {
+    "node": ">=12.13.0"
+  }
+}
