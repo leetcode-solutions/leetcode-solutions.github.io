@@ -1,9 +1,10 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+const baseUrl = '/leetcode/';
 module.exports = {
   title: 'leetcode solutions',
   tagline: 'practicing leetcode',
   url: 'https://duanwilliam.github.io',
-  baseUrl: '/leetcode/',
+  baseUrl: `${baseUrl}`,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -11,7 +12,7 @@ module.exports = {
   projectName: 'leetcode', // Usually your repo name.
   stylesheets: [
     {
-      href: '/katex/katex.min.css',
+      href: `${baseUrl}katex/katex.min.css`,
       type: 'text/css',
     },
   ],
