@@ -107,7 +107,7 @@ module.exports = {
               sync: true,
               customLabels: {
                 'python': 'Python3',
-                'cpp': 'C++11',
+                'cpp': 'C++17',
               },
             }],
           ],
