@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'practicing leetcode',
   url: 'https://duanwilliam.github.io',
   baseUrl: '/leetcode/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'duanwilliam', // Usually your GitHub org/user name.
