@@ -92,7 +92,7 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          path: 'z_docs',
+          path: 'z_lc',
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
           sidebarPath: require.resolve('./sidebars.js'),
