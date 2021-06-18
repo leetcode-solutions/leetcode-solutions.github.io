@@ -86,3 +86,27 @@ impl Solution {
 ```
 
 ## Related questions
+
+<Medium>
+
+[Longest Substring with At Most Two Distinct Characters](./longest-substring-with-at-most-two-distinct-characters)
+
+</Medium>
+
+<Medium>
+
+[Longest Substring with At Most K Distinct Characters](./longest-substring-with-at-most-k-distinct-characters)
+
+</Medium>
+
+<Hard>
+
+[Subarrays with K Different Integers](./subarrays-with-k-different-integers)
+
+</Hard>
+
+<Medium>
+
+[Maximum Erasure Value](./maximum-erasure-value)
+
+</Medium>
