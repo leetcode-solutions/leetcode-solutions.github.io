@@ -37,12 +37,6 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'index',
-          position: 'left',
-          label: 'index',
-        },
-        {
           href: 'https://github.com/duanwilliam/leetcode',
           label: 'GitHub',
           position: 'right',
@@ -56,12 +50,12 @@ module.exports = {
           title: 'idk',
           items: [
             {
-              label: 'landing page',
-              to: '/',
+              label: 'my website',
+              to: 'https://duanwilliam.github.io',
             },
             {
-              label: 'index',
-              to: '/docs/index',
+              label: 'my github',
+              to: 'https://github.com/duanwilliam',
             },
           ],
         },
