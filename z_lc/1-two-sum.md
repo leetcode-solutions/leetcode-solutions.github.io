@@ -1,5 +1,5 @@
 ---
-tags: [easy]
+tags: [easy, array, hash table]
 ---
 
 # Two Sum
