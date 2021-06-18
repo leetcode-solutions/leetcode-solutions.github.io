@@ -93,6 +93,7 @@ module.exports = {
       {
         docs: {
           path: 'z_lc',
+          routeBasePath: '/',
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
           sidebarPath: require.resolve('./sidebars.js'),
