@@ -85,7 +85,7 @@ impl Solution {
 
 ```
 
-## Related questions
+## Similar Questions
 
 <Similar title="Longest Substring with At Most Two Distinct Characters" m />
 

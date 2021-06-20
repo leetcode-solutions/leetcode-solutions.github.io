@@ -85,7 +85,7 @@ impl Solution {
 
 ```
 
-## Related questions
+## Similar Questions
 
 <Similar title="3Sum" m />
 

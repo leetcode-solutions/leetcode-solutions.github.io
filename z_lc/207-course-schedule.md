@@ -119,7 +119,7 @@ impl Solution {
 }
 ```
 
-## Related questions
+## Similar Questions
 
 <Similar title="Course Schedule II" m />
 
