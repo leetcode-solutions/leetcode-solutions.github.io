@@ -4,7 +4,7 @@ tags: [easy, array, hash table]
 
 # Two Sum
 
-<Easy> Easy </Easy>
+<Difficulty e />
 
 https://leetcode.com/problems/two-sum/
 
@@ -87,56 +87,20 @@ impl Solution {
 
 ## Related questions
 
-<Medium>
+<Similar title="3Sum" m />
 
-[3Sum](./3sum)
+<Similar title="4Sum" m />
 
-</Medium>
+<Similar title="Two Sum II - Input array is sorted" e />
 
-<Medium>
+<Similar title="Two Sum III - Data structure design" e />
 
-[4Sum](./4sum)
+<Similar title="Subarray Sum Equals K" m />
 
-</Medium>
+<Similar title="Two Sum IV - Input is a BST" e />
 
-<Easy>
+<Similar title="Two Sum Less Than K" e />
 
-[Two Sum II - Input array is sorted](./two-sum-ii-input-array-is-sorted)
+<Similar title="Max Number of K-Sum Pairs" m />
 
-</Easy>
-
-<Easy>
-
-[Two Sum III - Data structure design](./two-sum-iii-data-structure-design)
-
-</Easy>
-
-<Medium>
-
-[Subarray Sum Equals K](./subarray-sum-equals-k)
-
-</Medium>
-
-<Easy>
-
-[Two Sum IV - Input is a BST](./two-sum-iv-input-is-a-bst)
-
-</Easy>
-
-<Easy>
-
-[Two Sum Less Than K](./two-sum-less-than-k)
-
-</Easy>
-
-<Medium>
-
-[Max Number of K-Sum Pairs](./max-number-of-k-sum-pairs)
-
-</Medium>
-
-<Medium>
-
-[Count Good Meals](./count-good-meals)
-
-</Medium>
+<Similar title="Count Good Meals"  m/>

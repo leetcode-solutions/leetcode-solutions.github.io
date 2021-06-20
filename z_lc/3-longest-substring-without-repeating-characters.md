@@ -4,7 +4,7 @@ tags: [medium, string, two pointers]
 
 # Longest Substring Without Repeating Characters
 
-<Medium> Medium </Medium>
+<Difficulty m />
 
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
@@ -87,26 +87,10 @@ impl Solution {
 
 ## Related questions
 
-<Medium>
+<Similar title="Longest Substring with At Most Two Distinct Characters" m />
 
-[Longest Substring with At Most Two Distinct Characters](./longest-substring-with-at-most-two-distinct-characters)
+<Similar title="Longest Substring with At Most K Distinct Characters" m />
 
-</Medium>
+<Similar title="Subarrays with K Different Integers" h />
 
-<Medium>
-
-[Longest Substring with At Most K Distinct Characters](./longest-substring-with-at-most-k-distinct-characters)
-
-</Medium>
-
-<Hard>
-
-[Subarrays with K Different Integers](./subarrays-with-k-different-integers)
-
-</Hard>
-
-<Medium>
-
-[Maximum Erasure Value](./maximum-erasure-value)
-
-</Medium>
+<Similar title="Maximum Erasure Value" m />

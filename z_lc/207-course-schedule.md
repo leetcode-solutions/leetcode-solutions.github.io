@@ -4,7 +4,7 @@ tags: [medium, topological sort]
 
 # Course Schedule
 
-<Medium>Medium</Medium>
+<Difficulty m />
 
 https://leetcode.com/problems/course-schedule/
 
@@ -121,26 +121,10 @@ impl Solution {
 
 ## Related questions
 
-<Medium>
+<Similar title="Course Schedule II" m />
 
-[Course Schedule II](./course-schedule-ii)
+<Similar title="Graph Valid Tree" m />
 
-</Medium>
+<Similar title="Minimum Height Trees" m />
 
-<Medium>
-
-[Graph Valid Tree](./graph-valid-tree)
-
-</Medium>
-
-<Medium>
-
-[Minimum Height Trees](./minimum-height-trees)
-
-</Medium>
-
-<Hard>
-
-[Course Schedule III](./course-schedule-iii)
-
-</Hard>
+<Similar title="Course Schedule III" h />
