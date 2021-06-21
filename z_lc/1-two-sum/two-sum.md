@@ -1,4 +1,5 @@
 ---
+slug: .
 tags: [easy, array, hash table]
 ---
 
@@ -38,50 +39,9 @@ Thus, the algorithm is to iterate through `nums`, maintaining a hashtable `seen`
 
 ```md codetabs
 
-```python
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        seen = {}
-        for i,n in enumerate(nums):
-            complement = target - n
-            if complement in seen:
-                return [complement, i]
-            seen[n] = i
-        return None
-```cpp
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        #include <unordered_map>
-        
-        unordered_map<int, int> seen;
-        for(int i=0; i<nums.size(); ++i) {
-            int n = nums[i];
-            int complement = target - n;
-            if(auto iter = seen.find(complement); iter != seen.end()) {
-                return vector<int> {i, iter->second};    
-            }
-            seen[n] = i;
-        }
-        return vector<int>();
-    }
-};
-```rust
-impl Solution {
-    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        use std::collections::HashMap;
-        
-        let mut seen = HashMap::new();
-        for (i,n) in nums.iter().enumerate() {
-            let complement = target - n;
-            match seen.get(&complement) {
-                Some(&index) => return vec![i as i32, index],
-                None => seen.insert(n, i as i32),
-            };
-        }
-        vec![]
-    }
-}
+```python file="1-two-sum/two-sum.py"
+```cpp file="1-two-sum/two-sum.cpp"
+```rust file="1-two-sum/two-sum.rs"
 
 ```
 
