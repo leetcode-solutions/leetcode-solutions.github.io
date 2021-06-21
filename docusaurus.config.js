@@ -16,9 +16,6 @@ module.exports = {
       type: 'text/css',
     },
   ],
-  plugins: [
-    '@docusaurus/plugin-ideal-image',
-  ],
   themeConfig: {
     hideableSidebar: true,
     prism: {
