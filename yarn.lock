@@ -3667,10 +3667,10 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
-docusaurus-remark-plugin-codetabs@^1.0.0-alpha.0:
-  version "1.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/docusaurus-remark-plugin-codetabs/-/docusaurus-remark-plugin-codetabs-1.0.0-alpha.0.tgz#43422460a3e468c7a17ab5fb97b68304d23973b5"
-  integrity sha512-dLr2k9Pjc2BM1kSmOoLtAupnTYaTd78ujV9Pify7mEZD+nfLUVDvKxBFMT29JyMQCv57NkzeV3N2Yyy2uOLryQ==
+docusaurus-remark-plugin-codetabs@^1.0.0-alpha.1:
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/docusaurus-remark-plugin-codetabs/-/docusaurus-remark-plugin-codetabs-1.0.0-alpha.1.tgz#bcafba95cc41123bd9c3ad502929f59a8c8bc340"
+  integrity sha512-iLcK++yOq314QcP/BFRI/7sIw4nsFVx/nBikMr/qYQwKi2RkjFOyQii5iej0lCRIEQUcCVnbl8MxbjB9F9i2Gg==
 
 dom-converter@^0.2.0:
   version "0.2.0"

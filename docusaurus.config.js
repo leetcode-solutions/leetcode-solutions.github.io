@@ -101,6 +101,7 @@ module.exports = {
             require('remark-math'),
             [require('docusaurus-remark-plugin-codetabs'), {
               sync: true,
+              fileBasePath: './z_lc',
               customLabels: {
                 'python': 'Python3',
                 'cpp': 'C++17',
