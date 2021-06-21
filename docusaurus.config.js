@@ -111,6 +111,22 @@ module.exports = {
           rehypePlugins: [
             require('rehype-katex'),
           ],
+          sidebarItemsGenerator: async function ({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
+            let sidebarItems = await defaultSidebarItemsGenerator(args);
+            let i = 0;
+            while (i < sidebarItems.length) {
+              const item = sidebarItems[i];
+              if(item.type === 'category') {
+                sidebarItems.splice(i, 1, ...item.items);
+              } else {
+                i += 1;
+              }
+            }
+            return sidebarItems;
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
