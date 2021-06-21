@@ -92,7 +92,7 @@ module.exports = {
           editUrl:
             'https://github.com/duanwilliam/leetcode/edit/main',
           beforeDefaultRemarkPlugins:[
-            require('./remark-plugin-code-subsuper'),
+            require('./plugins/remark-plugin-code-subsuper'),
           ],
           remarkPlugins: [
             require('remark-math'),
