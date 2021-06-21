@@ -31,7 +31,7 @@ https://leetcode.com/problems/{% FILENAME}/
 **Time Complexity:**    |   $O()$
 **Space Complexity:**   |   $O()$
 
-</VAlign
+</VAlign>
 
 ```md codetabs
 
