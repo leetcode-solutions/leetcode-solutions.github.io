@@ -6,7 +6,7 @@ BASE_PATH = './z_lc'
 
 MD_TEMPLATE = '''---
 slug: .
-tags: [{% DIFFICULTY_TAG}, ]
+tags: [{% DIFFICULTY_TAG}, TODO]
 ---
 
 # {% TITLE}
