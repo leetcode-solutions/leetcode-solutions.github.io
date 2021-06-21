@@ -1,0 +1,25 @@
+.vAlign table {
+  overflow:initial;
+}
+
+.vAlign table thead {
+  display: none;
+}
+
+.vAlign table tr {
+  background-color: inherit;
+  border: none;
+}
+
+
+
+.vAlign table td {
+  border: none;
+  color: inherit;
+  padding: 0 var(--ifm-table-cell-padding);
+  vertical-align: top;
+}
+
+.vAlign table tr:first-of-type ~ tr td {
+  padding-top: var(--ifm-table-cell-padding);
+}
