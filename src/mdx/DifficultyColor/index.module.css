@@ -1,0 +1,14 @@
+.lc-easy, .lc-easy * {
+  color: var(--ifm-color-success) !important;
+  font-weight: 700;
+}
+
+.lc-medium, .lc-medium * {
+  color: var(--ifm-color-warning) !important;
+  font-weight: 700;
+}
+
+.lc-hard, .lc-hard * {
+  color: var(--ifm-color-danger) !important;
+  font-weight: 700;
+}

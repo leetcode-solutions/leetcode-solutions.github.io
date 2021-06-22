@@ -1,19 +1,17 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import { Easy, Medium, Hard } from '..';
+import { DifficultyColor } from '..';
 
-const Similar = (props) => {
-  const { title, e, m, h } = props;
-  const Tag = e ? Easy : m ? Medium : h ? Hard : 'div';
+const Similar = ({ title, ...props }) => {
   const href = `../${title.toLowerCase().replace(/\s+/g, '-')}`;
   return (
-    <Tag>
+    <DifficultyColor {...props}>
       <p>
         <Link to={href}>
           {title}
         </Link>
       </p>
-    </Tag>
+    </DifficultyColor>
   );
 };
 
