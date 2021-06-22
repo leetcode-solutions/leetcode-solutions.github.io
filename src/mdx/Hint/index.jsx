@@ -9,6 +9,7 @@ const Hint = ({ children }) => {
     <Collapse
       label="Hint"
       className={styles['lc-hint']}
+      labelClassName={styles['lc-hint-label']}
     >
       {children}
     </Collapse>
