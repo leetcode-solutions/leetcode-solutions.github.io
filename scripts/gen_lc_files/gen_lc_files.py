@@ -4,67 +4,7 @@ import re
 
 BASE_PATH = './z_lc'
 
-MD_TEMPLATE = '''---
-slug: .
-tags: [{% DIFFICULTY_TAG}, TODO]
----
-
-# {% TITLE}
-
-<Difficulty {% DIFFICULTY} />
-
-https://leetcode.com/problems/{% FILENAME}/
-
-## Problem
-
-
-
-### Examples
-
-<Example>
-
-| | |
-:--|:--
-**Input**       | ``
-**Output**      | ``
-**Explanation** | 
-
-</Example>
-
-### Constraints
-
-- 
-
-### Hints
-
-<Hint>
-
-
-
-</Hint>
-
-## Solution
-
-
-
-<VAlign>
-
-| | |
-:--|:--
-**Time Complexity:**    |   $O()$
-**Space Complexity:**   |   $O()$
-
-</VAlign>
-
-```md codetabs
-
-{% SOLUTIONS}
-
-```
-
-## Similar Questions
-
-'''
+MD_TEMPLATE = open('./md_template.md').readlines()
 
 def main(title, id, difficulty, languages):
     file_name = re.sub(
