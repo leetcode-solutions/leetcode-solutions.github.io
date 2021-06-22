@@ -1,18 +1,17 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
-const baseUrl = '/leetcode/';
 module.exports = {
   title: 'leetcode solutions',
   tagline: 'practicing leetcode',
-  url: 'https://duanwilliam.github.io',
-  baseUrl: `${baseUrl}`,
+  url: 'https://leetcode-solutions.github.io',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'duanwilliam', // Usually your GitHub org/user name.
-  projectName: 'leetcode', // Usually your repo name.
+  organizationName: 'leetcode-solutions', // Usually your GitHub org/user name.
+  projectName: 'leetcode-solutions.github.io', // Usually your repo name.
   stylesheets: [
     {
-      href: `${baseUrl}katex/katex.min.css`,
+      href: `/katex/katex.min.css`,
       type: 'text/css',
     },
   ],
@@ -34,7 +33,7 @@ module.exports = {
       },
       items: [
         {
-          href: 'https://github.com/duanwilliam/leetcode',
+          href: 'https://github.com/leetcode-solutions/leetcode-solutions.github.io',
           label: 'GitHub',
           position: 'right',
         },
@@ -43,19 +42,6 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'idk',
-          items: [
-            {
-              label: 'my website',
-              to: 'https://duanwilliam.github.io',
-            },
-            {
-              label: 'my github',
-              to: 'https://github.com/duanwilliam',
-            },
-          ],
-        },
         {
           title: 'Leetcode',
           items: [
@@ -70,7 +56,7 @@ module.exports = {
           items: [
             {
               label: 'Repository',
-              href: 'https://github.com/duanwilliam/leetcode',
+              href: 'https://github.com/leetcode-solutions/leetcode-solutions.github.io',
             },
           ],
         },
@@ -90,7 +76,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/duanwilliam/leetcode/edit/main',
+            'https://github.com/leetcode-solutions/leetcode-solutions.github.io/edit/main',
           beforeDefaultRemarkPlugins:[
             require('./plugins/remark-plugin-code-subsuper'),
           ],
