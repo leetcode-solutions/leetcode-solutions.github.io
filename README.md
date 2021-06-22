@@ -1,6 +1,6 @@
 # leetcode
 
-[![Build Status](https://travis-ci.com/leetcode-solutions/leetcode-solutions.github.io.svg?branch=main)](https://travis-ci.com/leetcode-solutions/leetcode-solutions.github.io)
+[![Deploy Actions Status](https://github.com/leetcode-solutions/leetcode-solutions.github.io/workflows/deploy/badge.svg)](https://github.com/leetcode-solutions/leetcode-solutions.github.io/actions)
 
 https://leetcode-solutions.github.io
 
