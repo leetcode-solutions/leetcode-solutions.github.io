@@ -3,7 +3,15 @@ import clsx from 'clsx';
 
 import styles from './index.module.css';
 
-const Collapse = ({children, label, className, ...props}) => {
+const Collapse = ({
+  children,
+  label,
+  labelClassName,
+  labelProps,
+  className,
+  ...props
+}) => {
+  const { className: _, ...spreadLabelProps } = labelProps || {};
   const [collapsed, setCollapsed] = useState(true);
   const [height, setHeight] = useState(undefined);
   const [contentVisible, setContentVisible] = useState(false);
@@ -25,13 +33,15 @@ const Collapse = ({children, label, className, ...props}) => {
       className={clsx('card',
         styles.collapse,
         collapsed && styles.collapsed,
+        className,
       )}
       onClick={handleClick}
+      {...props}
     >
       <span
         className={clsx(
           styles['collapse-label'],
-          className,
+          labelClassName,
         )}
         onTransitionEnd={() => {
           if(collapsed) {
@@ -39,7 +49,7 @@ const Collapse = ({children, label, className, ...props}) => {
             setTimeout(() => setContentVisible(false), 200);
           }
         }}
-        {...props}
+        {...labelProps}
       >
         {label}
       </span>
