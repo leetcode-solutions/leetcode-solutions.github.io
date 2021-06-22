@@ -1,0 +1,29 @@
+name: 'Preview'
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    name: 'preview build'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: test build
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+          npm run build
