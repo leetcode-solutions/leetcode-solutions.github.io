@@ -17,6 +17,20 @@ You may assume that each input would have **_exactly_ one solution**, and you ma
 
 You can return the answer in any order.
 
+:::example
+
+<VAlign>
+
+| | |
+:--|:--
+**Input**       | `nums = [2,7,11,15], target = 9`
+**Output**      | `[0,1]`
+**Explanation** | Because `nums[0] + nums[1] == 9`, we return `[0, 1]`.
+
+</VAlign>
+
+:::
+
 **Constraints:**
 - `2 <= nums.length <= 10^{4}`
 - `-10^{9} <= nums[i] <= 10^{9}`

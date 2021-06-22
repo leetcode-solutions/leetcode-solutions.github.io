@@ -13,6 +13,20 @@ https://leetcode.com/problems/longest-palindromic-substring/
 
 Given a string `s`, return _the longest palindromic substring_ in `s`.
 
+:::example
+
+<VAlign>
+
+| | |
+:--|:--
+**Input**   | `s = "babad"`
+**Output**  | `"bab"`
+**Note**    | `"aba"` is also a valid answer.
+
+</VAlign>
+
+:::
+
 **Constraints:**
 - `1 <= s.length <= 1000`
 - `s` consists of only digits and English letters (lower-case and/or upper-case)

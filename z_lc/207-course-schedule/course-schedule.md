@@ -17,6 +17,20 @@ There are a total of `numCourses` courses you have to take, labeled from `0` to 
 
 Return `true` if you can finish all courses. Otherwise, return `false`.
 
+:::example
+
+<VAlign>
+
+| | |
+:--|:--
+**Input**       | `numCourses = 2, prerequisites = [[1,0]]`
+**Output**      | `true`
+**Explanation** | There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
+
+</VAlign>
+
+:::
+
 **Constraints**:
 - `1 <= numCourses <= 10^{5}`
 - `0 <= prerequisites.length <= 5000`

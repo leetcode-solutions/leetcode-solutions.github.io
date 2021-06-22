@@ -19,6 +19,20 @@ https://leetcode.com/problems/{% FILENAME}/
 
 
 
+:::example
+
+<VAlign>
+
+| | |
+:--|:--
+**Input**       | ``
+**Output**      | ``
+**Explanation** | 
+
+</VAlign>
+
+:::
+
 **Constraints:**
 - 
 
