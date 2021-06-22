@@ -42,7 +42,7 @@ const transformNode = (node, formats) => {
     ? (
       {
         type: 'jsx',
-        value: `<code>${node.value.replace(/\\}/g, '}')}</code>`
+        value: `<code> ${node.value.replace(/\\}/g, '}')} </code>`
       }
     ) : (
       {
