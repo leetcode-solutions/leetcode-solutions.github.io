@@ -23,7 +23,6 @@ html[data-theme='dark'] {
   --ifm-font-color-base: #f5f6f7; /* notion dark mode text */
   --ifm-background-color: #36393f; /* discord background */ /*#2f3437;*/ /* notion dark mode background */
   --ifm-background-surface-color: #18191a;
-  --ifm-code-background: #010227; /* night owl code block theme background color */
 }
 
 .docusaurus-highlight-code-line {
