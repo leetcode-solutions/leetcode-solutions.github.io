@@ -1,28 +1,20 @@
-const AVAILABLE_FORMATS = [
-  'subscript',
-  'superscript',
-];
-
-const
-  subscriptRegex = /_{([^\r\n]+?(?<!\\))}/g,
-  superscriptRegex = /\^{([^\r\n]+?(?<!\\))}/g;
-
-const regexes = {
-  subscript: subscriptRegex,
-  superscript: superscriptRegex,
-};
-
-const tags = {
-  subscript: 'sub',
-  superscript: 'sup',
+const all_formats = {
+  subscript: {
+    regex: /_{([^\r\n]+?(?<!\\))}/g,
+    tag: 'sub',
+  },
+  superscript: {
+    regex: /\^{([^\r\n]+?(?<!\\))}/g,
+    tag: 'sup',
+  },
 };
 
 const transformNode = (node, formats) => {
   let transformed = false;
   const oldValue = node.value;
   node.value = node.value.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  for (const format of formats) {
-    const matches = [...node.value.matchAll(regexes[format])];
+  for (const {regex, tag} of Object.values(formats)) {
+    const matches = [...node.value.matchAll(regex)];
 
     if(matches.length === 0) continue;
 
@@ -30,7 +22,7 @@ const transformNode = (node, formats) => {
     let ind = 0;
     for (match of matches) {
       const start = match.index, end = match.index + match[0].length;
-      jsx = `${jsx}${node.value.substring(ind, start)}<${tags[format]}>${match[1]}</${tags[format]}>`;
+      jsx = `${jsx}${node.value.substring(ind, start)}<${tag}>${match[1]}</${tag}>`;
       ind = end;
     }
     if (node.value.substring(ind)) {
@@ -61,10 +53,13 @@ const isCodeNode = (node) => node.type === 'inlineCode';
 
 const attacher = (options = {}) => {
   const {
-    exclude = {},
+    exclude = [],
   } = options;
 
-  const formats = AVAILABLE_FORMATS.filter((format) => !(format in exclude));
+  const formats = exclude.reduce((accum, e) => {
+    const {[e]: _, ...rest} = accum;
+    return rest;
+  }, all_formats);
 
   const transformer = (node) => {
     if (isCodeNode(node)) {
