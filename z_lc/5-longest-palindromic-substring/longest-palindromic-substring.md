@@ -1,6 +1,6 @@
 ---
 slug: .
-tags: [medium, string]
+tags: [medium, string, dynamic programming]
 ---
 
 # Longest Palindromic Substring
