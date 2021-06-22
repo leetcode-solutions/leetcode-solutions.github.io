@@ -7,6 +7,10 @@ const all_formats = {
     regex: /\^{([^\r\n]+?(?<!\\))}/g,
     tag: 'sup',
   },
+  bold: {
+    regex: /\*\*{([^\r\n]+?(?<!\\))}\*\*/g,
+    tag: 'strong',
+  }
 };
 
 const transformNode = (node, formats) => {
