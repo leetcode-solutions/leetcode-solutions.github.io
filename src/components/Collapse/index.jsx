@@ -11,7 +11,7 @@ const Collapse = ({children, label, className, ...props}) => {
   const ref = useRef(null);
 
   const handleClick = useCallback((e) => {
-    e?.preventDefault();
+    e.preventDefault();
     if (!height) {
       setHeight(`${ref.current?.scrollHeight}px`);
       setContentVisible(true);
@@ -46,6 +46,7 @@ const Collapse = ({children, label, className, ...props}) => {
       <div
         className={styles['collapse-content']}
         ref={ref}
+        onClick={(e) => { e.stopPropagation(); }}
         style={{ height: height, visibility: contentVisible ? 'visible' : 'hidden' }}
       >
         {children}

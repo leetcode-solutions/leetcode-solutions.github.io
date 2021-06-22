@@ -2,6 +2,7 @@
   border: none;
   color: var(--ifm-font-color-base);
   font: var(--ifm-font-size-base)/var(--ifm-line-height-base) var(--ifm-font-family-base);
+  padding: 0;
   text-align: left;
   width: 100%;
 }
