@@ -3,23 +3,25 @@ import clsx from 'clsx';
 
 import styles from './index.module.css';
 
-const Collapse = ({children, label, ...props}) => {
+const Collapse = ({children, label, className, ...props}) => {
   const [collapsed, setCollapsed] = useState(true);
   const [height, setHeight] = useState(undefined);
+  const [contentVisible, setContentVisible] = useState(false);
 
   const ref = useRef(null);
 
   const handleClick = useCallback((e) => {
     e?.preventDefault();
     if (!height) {
-      setHeight(`${ref.current?.scrollHeight}px`)
+      setHeight(`${ref.current?.scrollHeight}px`);
+      setContentVisible(true);
     }
 
     setTimeout(() => setCollapsed((state) => !state), 100);
   }, [height]);
 
   return (
-    <div
+    <button
       className={clsx('card',
         styles.collapse,
         collapsed && styles.collapsed,
@@ -27,10 +29,14 @@ const Collapse = ({children, label, ...props}) => {
       onClick={handleClick}
     >
       <span
-        className={styles['collapse-label']}
+        className={clsx(
+          styles['collapse-label'],
+          className,
+        )}
         onTransitionEnd={() => {
           if(collapsed) {
             setHeight(undefined);
+            setTimeout(() => setContentVisible(false), 200);
           }
         }}
         {...props}
@@ -40,11 +46,11 @@ const Collapse = ({children, label, ...props}) => {
       <div
         className={styles['collapse-content']}
         ref={ref}
-        style={{ height: height }}
+        style={{ height: height, visibility: contentVisible ? 'visible' : 'hidden' }}
       >
         {children}
       </div>
-    </div>
+    </button>
   );
 };
 

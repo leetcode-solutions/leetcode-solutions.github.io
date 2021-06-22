@@ -1,0 +1,12 @@
+.lc-hint {
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.lc-hint:hover {
+  opacity: 0.8;
+}
+
+.lc-hint:focus-within {
+  opacity: 1;
+}
