@@ -17,9 +17,9 @@ There are a total of `numCourses` courses you have to take, labeled from `0` to 
 
 Return `true` if you can finish all courses. Otherwise, return `false`.
 
-:::example
+### Examples
 
-<VAlign>
+<Example>
 
 | | |
 :--|:--
@@ -27,16 +27,35 @@ Return `true` if you can finish all courses. Otherwise, return `false`.
 **Output**      | `true`
 **Explanation** | There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
 
-</VAlign>
+</Example>
 
-:::
+### Constraints
 
-**Constraints**:
 - `1 <= numCourses <= 10^{5}`
 - `0 <= prerequisites.length <= 5000`
 - `prerequisites[i].length == 2`
 - `0 <= a_{i}, b_{i} < numCourses`
 - All pairs `prerequisites[i]` are **unique**.
+
+### Hints
+
+<Hint>
+
+This problem is equivalent to finding if a cycle exists in a directed graph. If a cycle exists, no topological ordering exists and therefore it will be impossible to take all courses.
+
+</Hint>
+
+<Hint>
+
+[Topological Sort via DFS](https://class.coursera.org/algo-003/lecture/52) - A great video tutorial (21 minutes) on Coursera explaining the basic concepts of Topological Sort.
+
+</Hint>
+
+<Hint>
+
+Topological sort could also be done via [BFS](http://en.wikipedia.org/wiki/Topological_sorting#Algorithms).
+
+</Hint>
 
 ## Solution
 

@@ -1,6 +1,6 @@
 ---
 slug: .
-tags: [medium, string, two pointers]
+tags: [medium, string, hash table, two pointers]
 ---
 
 # Longest Substring Without Repeating Characters
@@ -13,9 +13,9 @@ https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
 Given a string `s`, find the length of the **longest substring** without repeating characters.
 
-:::example
+### Examples
 
-<VAlign>
+<Example>
 
 | | |
 :--|:--
@@ -23,11 +23,10 @@ Given a string `s`, find the length of the **longest substring** without repeati
 **Output**      | `3`
 **Explanation** | The answer is `"abc"`, with the length of 3.
 
-</VAlign>
+</Example>
 
-:::
+### Constraints
 
-**Constraints:**
 - `0 <= s.length <= 5 * 10^{4}`
 - `s` consists of English letters, digits, symbols, and spaces.
 

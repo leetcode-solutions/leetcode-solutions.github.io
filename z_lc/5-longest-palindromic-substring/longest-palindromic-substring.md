@@ -13,9 +13,9 @@ https://leetcode.com/problems/longest-palindromic-substring/
 
 Given a string `s`, return _the longest palindromic substring_ in `s`.
 
-:::example
+### Examples
 
-<VAlign>
+<Example>
 
 | | |
 :--|:--
@@ -23,13 +23,33 @@ Given a string `s`, return _the longest palindromic substring_ in `s`.
 **Output**  | `"bab"`
 **Note**    | `"aba"` is also a valid answer.
 
-</VAlign>
+</Example>
 
-:::
+### Constraints
 
-**Constraints:**
 - `1 <= s.length <= 1000`
 - `s` consists of only digits and English letters (lower-case and/or upper-case)
+
+### Hints
+
+<Hint>
+
+How can we reuse a previously computed palindrome to compute a larger palindrome?
+
+</Hint>
+
+<Hint>
+
+If `"aba"` is a palindrome, is `"xabax"` a palindrome? Similarly is `"xabay"` a palindrome?
+
+</Hint>
+
+<Hint>
+
+Complexity based hint:  
+If we use brute-force and check whether for every start and end position a substring is a palindrome we have $O(n^2)$ start - end pairs and $O(n)$ palindromic checks. Can we reduce the time for palindromic checks to $O(1)$ by reusing some previous computation?
+
+</Hint>
 
 ## Solution
 Suppose our string $s = s_0 s_1 \ldots s_{n-1}$.

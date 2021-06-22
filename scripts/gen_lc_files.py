@@ -19,9 +19,9 @@ https://leetcode.com/problems/{% FILENAME}/
 
 
 
-:::example
+### Examples
 
-<VAlign>
+<Example>
 
 | | |
 :--|:--
@@ -29,12 +29,19 @@ https://leetcode.com/problems/{% FILENAME}/
 **Output**      | ``
 **Explanation** | 
 
-</VAlign>
+</Example>
 
-:::
+### Constraints
 
-**Constraints:**
 - 
+
+### Hints
+
+<Hint>
+
+
+
+</Hint>
 
 ## Solution
 
