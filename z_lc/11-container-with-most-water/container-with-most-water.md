@@ -17,8 +17,6 @@ Given `n` non-negative integers `a_{1}, a_{2}, ..., a_{n}`, where each represent
 
 ### Examples
 
-
-
 <Example>
 
 ![Visual example](./assets/example.jpg)
@@ -36,6 +34,26 @@ Given `n` non-negative integers `a_{1}, a_{2}, ..., a_{n}`, where each represent
 - `n == height.length`
 - `2 <= n <= 10^{5}`
 - `0 <= height[i] <= 10^{4}`
+
+### Hints
+
+<Hint>
+
+The aim is to maximize the area formed between the vertical lines. The area of any container is calculated using the shorter line as length and the distance between the lines as the width of the rectangle.  
+`Area = length of shorter vertical line * distance between lines`
+
+We can definitely get the maximum width container as the outermost lines have the maximum distance between them. However, this container might not be the maximum in size as one of the vertical lines of this container could be really short.
+
+![](./assets/hint1_1.png)
+![](./assets/hint1_2.png)
+
+</Hint>
+
+<Hint>
+
+Start with the maximum width container and go to a shorter width container if there is a vertical line longer than the current containers shorter line. This way we are compromising on the width but we are looking forward to a longer length container.
+
+</Hint>
 
 ## Solution
 
