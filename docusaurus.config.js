@@ -100,22 +100,8 @@ module.exports = {
               
             },
           },
-          sidebarItemsGenerator: async function ({
-            defaultSidebarItemsGenerator,
-            ...args
-          }) {
-            let sidebarItems = await defaultSidebarItemsGenerator(args);
-            let i = 0;
-            while (i < sidebarItems.length) {
-              const item = sidebarItems[i];
-              if(item.type === 'category') {
-                sidebarItems.splice(i, 1, ...item.items);
-              } else {
-                i += 1;
-              }
-            }
-            return sidebarItems;
-          },
+          numberPrefixParser: require('./sidebarGeneratorOptions').numberPrefixParser,
+          sidebarItemsGenerator: require('./sidebarGeneratorOptions').sidebarItemsGenerator,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
