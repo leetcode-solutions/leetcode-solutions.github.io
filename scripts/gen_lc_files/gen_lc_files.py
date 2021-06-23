@@ -1,20 +1,20 @@
 import os
+from pathlib import Path
 import argparse
 import re
 
-BASE_PATH = './z_lc'
+SCRIPT_PATH = Path(__file__).parent.absolute()
+PROJECT_ROOT = SCRIPT_PATH.parent.parent.absolute()
+BASE_PATH = PROJECT_ROOT.joinpath('./z_lc')
 
-MD_TEMPLATE = open('./md_template.md').readlines()
+MD_TEMPLATE = open(SCRIPT_PATH.joinpath('md_template.md')).read()
 
 def main(title, id, difficulty, languages):
-    file_name = re.sub(
-        '\s',
-        '-',
-        title.strip().lower()
-    )
+    file_name = re.sub('\s','-',title.strip().lower())
     directory_name = f'{id}-{file_name}'
     os.mkdir(f'{BASE_PATH}/{directory_name}')
     print(f'created directory {BASE_PATH}/{directory_name}')
+
     for lang, ext in languages:
         with open(f'{BASE_PATH}/{directory_name}/{file_name}.{ext}', 'w') as f: pass
         print(f'created file {BASE_PATH}/{directory_name}/{file_name}.{ext}')
