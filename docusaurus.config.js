@@ -72,7 +72,6 @@ module.exports = {
           path: 'z_lc',
           routeBasePath: '/',
           showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
