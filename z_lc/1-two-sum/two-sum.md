@@ -60,13 +60,15 @@ The second train of thought is, without changing the array, can we use additiona
 
 ## Solution
 
-We know there exists two indeces $i$, $j$ such that $i\neq j, nums[i] + nums[j] = target$. We can rewrite this as $nums[i] = target - nums[j]$ and vice versa.
+A naive approach may be to try all combinations of distinct indices $i,j$, and returning the pair whose sum is $target$. However, with $1 + \ldots + n-1 = O(n^2)$ pairs, this approach would take quite long.
+
+We know there exists two indeces $i, j$ such that $i\neq j, nums[i] + nums[j] = target$. We can rewrite this as $nums[i] = target - nums[j]$ and vice versa.
 
 To optimally find the two elements, suppose we iterate through the array, saving the values observed along the way. Let $n$ be the value observed at index $i$.
 
-A naive approach may be to test the sum of $n$ with each already observed value to see if they sum to $target$. However, this would still result in $1+\ldots+n-1=O(n^2)$ comparisons.
+Let the value at some index $i$ be $n=nums[i]$. Rather than trying pairs of indices to see if their values sum up to $target$, it may be more useful to think of checking if $target - n$ has already been seen at each index $i$. 
 
-Instead, it may be more useful to think of checking if $target - n$ has already been observed. This can be done in amortized $O(1)$ time if the observed values have been stored in a hashtable. We can also use this hashtable to store and access the index associated with each value in $O(1)$ time as well.
+We can observe that we want to be able to quickly check if some value, $target - n$, has already been observed. This lends to using a hash table to store values observed so far, as they offer amortized $O(1)$ lookup; furthermore, the hashtable would let us easily get the index associated with the value as well. 
 
 Thus, the algorithm is to iterate through `nums`, maintaining a hashtable `seen` mapping observed values to the index they were observed along the way; at each index `i` with value `n`, we simply check if `target - n` is in `seen`, and if so, return `i` and the index associated with our other value, `seen[target - n]`; otherwise, we add `n` and `i` to `seen`, and continue iterating.
 
