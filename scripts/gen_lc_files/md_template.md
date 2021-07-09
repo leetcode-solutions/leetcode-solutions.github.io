@@ -1,6 +1,7 @@
 ---
 slug: .
-tags: [{% DIFFICULTY_TAG}, TODO]
+tags: []
+difficulty: {% DIFFICULTY_TAG}
 ---
 
 # {% TITLE}

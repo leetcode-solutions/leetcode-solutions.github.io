@@ -21,11 +21,37 @@ import {ThemeClassNames, docVersionSearchTag} from '@docusaurus/theme-common';
 
 import * as customMdxComponents from '../../mdx';
 
+function getSidebar({versionMetadata, currentDocRoute}) {
+  function addTrailingSlash(str) {
+    return str.endsWith('/') ? str : `${str}/`;
+  }
+
+  function removeTrailingSlash(str) {
+    return str.endsWith('/') ? str.slice(0, -1) : str;
+  }
+
+  const {permalinkToSidebar, docsSidebars} = versionMetadata; // With/without trailingSlash, we should always be able to get the appropriate sidebar
+  // note: docs plugin permalinks currently never have trailing slashes
+  // trailingSlash is handled globally at the framework level, not plugin level
+
+  const sidebarName =
+    permalinkToSidebar[currentDocRoute.path] ||
+    permalinkToSidebar[addTrailingSlash(currentDocRoute.path)] ||
+    permalinkToSidebar[removeTrailingSlash(currentDocRoute.path)];
+  const sidebar = docsSidebars[sidebarName];
+  return {
+    sidebar,
+    sidebarName,
+  };
+}
+
 function DocPageContent({currentDocRoute, versionMetadata, children}) {
   const {siteConfig, isClient} = useDocusaurusContext();
-  const {pluginId, permalinkToSidebar, docsSidebars, version} = versionMetadata;
-  const sidebarName = permalinkToSidebar[currentDocRoute.path];
-  const sidebar = docsSidebars[sidebarName];
+  const {pluginId, version} = versionMetadata;
+  const {sidebarName, sidebar} = getSidebar({
+    versionMetadata,
+    currentDocRoute,
+  });
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);
   const [hiddenSidebar, setHiddenSidebar] = useState(false);
   const toggleSidebar = useCallback(() => {
@@ -46,7 +72,7 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
       }}>
       <div className={styles.docPage}>
         {sidebar && (
-          <div
+          <aside
             className={clsx(styles.docSidebarContainer, {
               [styles.docSidebarContainerHidden]: hiddenSidebarContainer,
             })}
@@ -60,8 +86,7 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
               if (hiddenSidebarContainer) {
                 setHiddenSidebar(true);
               }
-            }}
-            role="complementary">
+            }}>
             <DocSidebar
               key={
                 // Reset sidebar state on sidebar changes
@@ -99,7 +124,7 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
                 <IconArrow className={styles.expandSidebarButtonIcon} />
               </div>
             )}
-          </div>
+          </aside>
         )}
         <main
           className={clsx(styles.docMainContainer, {
@@ -108,7 +133,7 @@ function DocPageContent({currentDocRoute, versionMetadata, children}) {
           })}>
           <div
             className={clsx(
-              'container padding-vert--lg',
+              'container padding-top--md padding-bottom--lg',
               styles.docItemWrapper,
               {
                 [styles.docItemWrapperEnhanced]: hiddenSidebarContainer,
@@ -140,7 +165,9 @@ function DocPage(props) {
     <DocPageContent
       currentDocRoute={currentDocRoute}
       versionMetadata={versionMetadata}>
-      {renderRoutes(docRoutes)}
+      {renderRoutes(docRoutes, {
+        versionMetadata,
+      })}
     </DocPageContent>
   );
 }

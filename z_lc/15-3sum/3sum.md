@@ -1,6 +1,7 @@
 ---
 slug: .
-tags: [medium, TODO]
+tags: [TODO]
+difficulty: medium
 ---
 
 # 3Sum

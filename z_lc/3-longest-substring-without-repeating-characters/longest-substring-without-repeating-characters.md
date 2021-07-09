@@ -1,6 +1,7 @@
 ---
 slug: .
-tags: [medium, string, hash table, two pointers]
+tags: [string, hash table, two pointers]
+difficulty: medium
 ---
 
 # Longest Substring Without Repeating Characters

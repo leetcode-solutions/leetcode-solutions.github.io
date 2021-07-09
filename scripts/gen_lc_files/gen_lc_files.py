@@ -5,7 +5,8 @@ import re
 
 SCRIPT_PATH = Path(__file__).parent.absolute()
 PROJECT_ROOT = SCRIPT_PATH.parent.parent.absolute()
-BASE_PATH = PROJECT_ROOT.joinpath('./z_lc')
+RELATIVE_BASE_PATH = 'z_lc'
+BASE_PATH = PROJECT_ROOT.joinpath(RELATIVE_BASE_PATH)
 
 MD_TEMPLATE = open(SCRIPT_PATH.joinpath('md_template.md')).read()
 
@@ -13,11 +14,11 @@ def main(title, id, difficulty, languages):
     file_name = re.sub('\s','-',title.strip().lower())
     directory_name = f'{id}-{file_name}'
     os.mkdir(f'{BASE_PATH}/{directory_name}')
-    print(f'created directory {BASE_PATH}/{directory_name}')
+    print(f'created directory PROJECT_ROOT/{RELATIVE_BASE_PATH}/{directory_name}')
 
     for lang, ext in languages:
         with open(f'{BASE_PATH}/{directory_name}/{file_name}.{ext}', 'w') as f: pass
-        print(f'created file {BASE_PATH}/{directory_name}/{file_name}.{ext}')
+        print(f'created file PROJECT_ROOT/{RELATIVE_BASE_PATH}/{directory_name}/{file_name}.{ext}')
 
     to_tag = {
         'e': 'easy',
@@ -34,7 +35,7 @@ def main(title, id, difficulty, languages):
     
     with open(f'{BASE_PATH}/{directory_name}/{file_name}.md', 'w') as f:
         f.write(md_contents)
-        print(f'create md template {BASE_PATH}/{directory_name}/{file_name}.md')
+        print(f'create md template PROJECT_ROOT/{RELATIVE_BASE_PATH}/{directory_name}/{file_name}.md')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="generate the files for a leetcode question")

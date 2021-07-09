@@ -1,6 +1,7 @@
 ---
 slug: .
-tags: [medium, array, two pointers]
+tags: [array, two pointers]
+difficulty: medium
 ---
 
 # Container With Most Water

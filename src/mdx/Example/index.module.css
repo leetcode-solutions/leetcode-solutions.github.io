@@ -1,0 +1,8 @@
+.example p > img {
+  width: 100%;
+  border-radius: var(--ifm-card-border-radius);
+}
+
+.example table:first-child {
+  margin-top: var(--ifm-spacing-vertical);
+}

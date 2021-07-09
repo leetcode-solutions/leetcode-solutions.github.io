@@ -1,6 +1,7 @@
 ---
 slug: .
-tags: [medium, topological sort]
+tags: [topological sort]
+difficulty: medium
 ---
 
 # Course Schedule

@@ -1,6 +1,7 @@
 ---
 slug: .
-tags: [easy, array, hash table]
+tags: [array, hash table]
+difficulty: easy
 ---
 
 # Two Sum
