@@ -81,9 +81,9 @@ Since we want to compute `memo[i+1]` before `memo[i]` for our dynamic programmin
 
 ```md codetabs
 
-```python file="5-longest-palindromic-substring/solution-1-dp/longest-palindromic-substring.py"
-```cpp file="5-longest-palindromic-substring/solution-1-dp/longest-palindromic-substring.cpp"
-```rust file="5-longest-palindromic-substring/solution-1-dp/longest-palindromic-substring.rs"
+```python file="5-longest-palindromic-substring/longest-palindromic-substring.py":2-19
+```cpp file="5-longest-palindromic-substring/longest-palindromic-substring.cpp":2-27
+```rust file="5-longest-palindromic-substring/longest-palindromic-substring.rs":2-25
 
 ```
 
@@ -109,9 +109,9 @@ With this in mind, we can simply try to expand palindromes from each character i
 
 ```md codetabs
 
-```python file="5-longest-palindromic-substring/solution-2-expand/longest-palindromic-substring.py"
-```cpp file="5-longest-palindromic-substring/solution-2-expand/longest-palindromic-substring.cpp"
-```rust file="5-longest-palindromic-substring/solution-2-expand/longest-palindromic-substring.rs"
+```python file="5-longest-palindromic-substring/longest-palindromic-substring.py":21-36
+```cpp file="5-longest-palindromic-substring/longest-palindromic-substring.cpp":30-54
+```rust file="5-longest-palindromic-substring/longest-palindromic-substring.rs":28-63
 
 ```
 
@@ -140,9 +140,9 @@ Since we only expand starting from $r$, the rightmost index explored so far, in 
 
 ```md codetabs
 
-```python file="5-longest-palindromic-substring/solution-3-manachers/longest-palindromic-substring.py"
-```cpp file="5-longest-palindromic-substring/solution-3-manachers/longest-palindromic-substring.cpp"
-```rust file="5-longest-palindromic-substring/solution-3-manachers/longest-palindromic-substring.rs"
+```python file="5-longest-palindromic-substring/longest-palindromic-substring.py":39-58
+```cpp file="5-longest-palindromic-substring/longest-palindromic-substring.cpp":57-97
+```rust file="5-longest-palindromic-substring/longest-palindromic-substring.rs":66-114
 
 ```
 
