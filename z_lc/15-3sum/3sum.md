@@ -1,6 +1,6 @@
 ---
 slug: ../3sum
-tags: [TODO]
+tags: [array, sort, two pointers]
 difficulty: medium
 ---
 
