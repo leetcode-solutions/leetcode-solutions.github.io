@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../3sum
 tags: [TODO]
 difficulty: medium
 ---

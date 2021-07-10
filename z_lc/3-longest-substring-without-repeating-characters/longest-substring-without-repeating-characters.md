@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../longest-substring-without-repeating-characters
 tags: [string, hash table, two pointers]
 difficulty: medium
 ---

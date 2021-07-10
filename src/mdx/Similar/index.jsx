@@ -3,7 +3,7 @@ import Link from '@docusaurus/Link';
 import { DifficultyColor } from '..';
 
 const Similar = ({ title, ...props }) => {
-  const href = `../${title.toLowerCase().replace(/\s+/g, '-')}`;
+  const href = `${title}`.toLowerCase().replace(/\s+/g, '-');
   return (
     <DifficultyColor {...props}>
       <p>

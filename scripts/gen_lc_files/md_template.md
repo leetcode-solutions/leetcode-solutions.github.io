@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../{{ FILENAME }}
 tags: []
 difficulty: {{ DIFFICULTY_TAG }}
 ---

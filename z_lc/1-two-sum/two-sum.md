@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../two-sum
 tags: [array, hash table]
 difficulty: easy
 ---

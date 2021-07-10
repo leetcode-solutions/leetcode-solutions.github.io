@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../remove-nth-node-from-end-of-list
 tags: [medium, TODO]
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../container-with-most-water
 tags: [array, two pointers]
 difficulty: medium
 ---

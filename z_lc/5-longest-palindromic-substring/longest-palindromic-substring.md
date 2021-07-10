@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../longest-palindromic-substring
 tags: [string, dynamic programming]
 difficulty: medium
 ---

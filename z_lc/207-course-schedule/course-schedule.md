@@ -1,5 +1,5 @@
 ---
-slug: .
+slug: ../course-schedule
 tags: [topological sort]
 difficulty: medium
 ---
