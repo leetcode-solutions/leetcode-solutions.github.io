@@ -1,14 +1,14 @@
 ---
 slug: .
 tags: []
-difficulty: {% DIFFICULTY_TAG}
+difficulty: {{ DIFFICULTY_TAG }}
 ---
 
-# {% TITLE}
+# {{ TITLE }}
 
-<Difficulty {% DIFFICULTY} />
+<Difficulty {{ DIFFICULTY }} />
 
-https://leetcode.com/problems/{% FILENAME}/
+https://leetcode.com/problems/{{ FILENAME }}/
 
 ## Problem
 
@@ -53,7 +53,7 @@ https://leetcode.com/problems/{% FILENAME}/
 
 ```md codetabs
 
-{% SOLUTIONS}
+{{ SOLUTIONS }}
 
 ```
 

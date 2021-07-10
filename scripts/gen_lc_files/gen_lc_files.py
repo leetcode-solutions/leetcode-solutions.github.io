@@ -29,11 +29,11 @@ def main(title, id, difficulty, languages):
     }
     solutions = '\n'.join([f'```{lang} file="{directory_name}/{file_name}.{ext}"' for lang, ext in languages])
     md_contents = MD_TEMPLATE \
-        .replace('{% TITLE}', title) \
-        .replace('{% DIFFICULTY}', difficulty) \
-        .replace('{% DIFFICULTY_TAG}', to_tag[difficulty]) \
-        .replace('{% FILENAME}', file_name) \
-        .replace('{% SOLUTIONS}', solutions)
+        .replace('{{ TITLE }}', title) \
+        .replace('{{ DIFFICULTY }}', difficulty) \
+        .replace('{{ DIFFICULTY_TAG }}', to_tag[difficulty]) \
+        .replace('{{ FILENAME }}', file_name) \
+        .replace('{{ SOLUTIONS }}', solutions)
     
     with open(f'{BASE_PATH}/{directory_name}/{file_name}.md', 'w') as f:
         f.write(md_contents)
