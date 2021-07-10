@@ -1,6 +1,7 @@
 ---
 slug: ../remove-nth-node-from-end-of-list
-tags: [medium, TODO]
+tags: [linked list]
+difficulty: medium
 ---
 
 # Remove Nth Node From End of List
